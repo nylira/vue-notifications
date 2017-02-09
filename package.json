@@ -1,6 +1,6 @@
 {
   "name": "@nylira/vue-notifications",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vue notification system component for Vue/Vuex 2.",
   "main": "index.js",
   "scripts": {
