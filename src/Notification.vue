@@ -25,7 +25,7 @@ export default {
       else return 'ni-notification-default'
     },
     headerStyle () {
-      if (this.color) {
+      if (!this.data.type && this.color) {
         return {
           background: this.color
         }

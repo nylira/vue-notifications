@@ -2,6 +2,7 @@
   <div class="ni-notifications">
     <notification
       v-for="notification in notifications"
+      :key="notification.time"
       :data="notification"
       :color="color"
     >
