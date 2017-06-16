@@ -1,5 +1,5 @@
 <template>
-  <div class="ni-notification" :class="cssClass" @click="deactivate" v-if="active">
+  <div :class="cssClass" @click="deactivate" v-if="active">
     <header :style="headerStyle">
       <i :class="'icon fa fa-' + data.icon" v-if="data.icon"></i>
       <div class="title" v-if="data.title">{{ data.title }}</div>
@@ -21,8 +21,10 @@ export default {
       return moment(this.data.time).fromNow()
     },
     cssClass () {
-      if (this.data.type) return `ni-notification-${this.data.type}`
-      else return 'ni-notification-default'
+      let value = 'ni-notification'
+      if (this.data.type) value += `ni-notification-${this.data.type}`
+      if (this.theme) value += `ni-notification-theme-${this.theme}`
+      return value
     },
     headerStyle () {
       if (!this.data.type && this.color) {
@@ -43,8 +45,7 @@ export default {
       // console.log('destroying myself!')
       this.active = false
     },
-    setDeactivation () {
-      if (!this.data.layout || this.data.layout === 'banner') {
+    setDeactivation () { if (!this.data.layout || this.data.layout === 'banner') {
         // notification active duration is 5 seconds - (time since creation)
         let activeDuration = this.duration - (Date.now() - this.data.time)
 

@@ -5,6 +5,7 @@
       :key="notification.time"
       :data="notification"
       :color="color"
+      theme="theme"
     >
     </notification>
   </div>
@@ -17,7 +18,7 @@ export default {
   components: {
     Notification
   },
-  props: ['notifications', 'color']
+  props: ['notifications', 'color', 'theme']
 }
 </script>
 
