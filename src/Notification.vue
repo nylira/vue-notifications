@@ -22,8 +22,8 @@ export default {
     },
     cssClass () {
       let value = 'ni-notification'
-      if (this.data.type) value += `ni-notification-${this.data.type}`
-      if (this.theme) value += `ni-notification-theme-${this.theme}`
+      if (this.data.type) value += ` ni-notification-${this.data.type}`
+      if (this.theme) value += ` ni-notification-theme-${this.theme}`
       return value
     },
     headerStyle () {
