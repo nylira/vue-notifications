@@ -63,7 +63,8 @@ warning = hsl(30,100%,50%)
 error = hsl(0,100%,50%)
 
 .ni-notification
-  background c-modal-bg
+  background #fff
+  background app-bg
 
   font-size 0.75rem
   cursor pointer
@@ -75,7 +76,9 @@ error = hsl(0,100%,50%)
   align-items center
   padding 0 0.375rem
   height 2em
-  background c-app-fg
+
+  background #eee
+  background app-fg
 
   .icon
     color bright
