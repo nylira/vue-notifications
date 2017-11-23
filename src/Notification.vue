@@ -1,7 +1,7 @@
 <template lang='pug'>
 div(:class='cssClass' @click='deactivate' v-if='active')
   header
-    .icon: i.material-icons(v-if='data.icon') {{ data.icon }}
+    .icon(v-if='data.icon'): i.material-icons {{ data.icon }}
     .title(v-if='data.title') {{ data.title }}
     menu
       .time(v-if='data.time') {{ fromNow }}
@@ -57,13 +57,9 @@ export default {
 </script>
 
 <style lang='stylus'>
-@require '~@/styles/variables.styl'
-
-warning = hsl(30,100%,50%)
-error = hsl(0,100%,50%)
+@require '~variables'
 
 .ni-notification
-  background #fff
   background app-bg
 
   font-size 0.75rem
@@ -71,13 +67,16 @@ error = hsl(0,100%,50%)
   user-select none
   margin 0.5rem 0.5rem 0
 
+  border 2px solid bc
+  border-radius 0.25rem
+  shadow()
+
 .ni-notification header
   display flex
   align-items center
   padding 0 0.375rem
   height 2em
 
-  background #eee
   background app-fg
 
   .icon
@@ -89,7 +88,7 @@ error = hsl(0,100%,50%)
   color warning
 
 .ni-notification.ni-notification-error header .icon
-  color error
+  color danger
 
 .ni-notification header .icon
   width 1rem
@@ -121,10 +120,6 @@ error = hsl(0,100%,50%)
 
 .ni-notification:hover menu .close
   display block
-
-.ni-notification.ni-notification-theme-cosmos
-  border 2px solid bc-dim
-  border-radius 0.25rem
 
 @media screen and (min-width 360px)
   .ni-notification
