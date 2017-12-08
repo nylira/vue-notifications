@@ -77,18 +77,18 @@ export default {
   padding 0 0.375rem
   height 2em
 
-  background app-fg
+  background success
 
   .icon
     color bright
   .title
     color bright
 
-.ni-notification.ni-notification-warning header .icon
-  color warning
+.ni-notification.ni-notification-warning header
+  background warning
 
-.ni-notification.ni-notification-error header .icon
-  color danger
+.ni-notification.ni-notification-error header
+  background danger
 
 .ni-notification header .icon
   width 1rem
