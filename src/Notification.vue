@@ -60,7 +60,7 @@ export default {
 @require '~variables'
 
 .ni-notification
-  background app-bg
+  background app-fg
 
   font-size 0.75rem
   cursor pointer
@@ -84,7 +84,7 @@ export default {
   padding 0 0.375rem
   height 2em
 
-  border-radius 0.1875rem 0.1875rem 0 0
+  border-radius 0.25rem 0.25rem 0 0
   background success
 
   .icon
