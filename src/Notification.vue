@@ -67,9 +67,16 @@ export default {
   user-select none
   margin 0.5rem 0.5rem 0
 
-  border 2px solid bc
   border-radius 0.25rem
   shadow()
+
+  &.ni-notification-warning
+    header
+      background warning
+
+  &.ni-notification-error
+    header
+      background danger
 
 .ni-notification header
   display flex
@@ -77,18 +84,13 @@ export default {
   padding 0 0.375rem
   height 2em
 
+  border-radius 0.1875rem 0.1875rem 0 0
   background success
 
   .icon
     color bright
   .title
     color bright
-
-.ni-notification.ni-notification-warning header
-  background warning
-
-.ni-notification.ni-notification-error header
-  background danger
 
 .ni-notification header .icon
   width 1rem
@@ -105,7 +107,7 @@ export default {
   padding-right 0.375rem
 
 .ni-notification header menu
-  color dim
+  color hsla(0,0,100%,0.67)
   font-size 0.75rem
 
 .ni-notification header menu .close
