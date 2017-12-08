@@ -22,7 +22,7 @@ export default {
   position: fixed
   top: 0
   right: 0
-  z-index: 1000
+  z-index: 2000
   display: flex
   flex-flow: column nowrap
   align-items: stretch
