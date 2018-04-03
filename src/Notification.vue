@@ -60,7 +60,7 @@ export default {
 @require '~variables'
 
 .ni-notification
-  background app-fg
+  background var(--app-fg)
 
   font-size 0.75rem
   cursor pointer
@@ -72,11 +72,11 @@ export default {
 
   &.ni-notification-warning
     header
-      background warning
+      background var(--warning)
 
   &.ni-notification-error
     header
-      background danger
+      background var(--danger)
 
 .ni-notification header
   display flex
@@ -85,12 +85,11 @@ export default {
   height 2em
 
   border-radius 0.25rem 0.25rem 0 0
-  background success
+  background var(--success)
 
-  .icon
-    color bright
+  .icon,
   .title
-    color bright
+    color var(--bright)
 
 .ni-notification header .icon
   width 1rem
@@ -115,7 +114,7 @@ export default {
 
 .ni-notification .body
   padding 0.375rem
-  color txt
+  color var(--txt)
 
 .ni-notification:hover menu .time
   display none
